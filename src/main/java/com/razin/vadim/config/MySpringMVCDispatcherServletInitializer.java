@@ -6,17 +6,16 @@ public class MySpringMVCDispatcherServletInitializer extends AbstractAnnotationC
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return null; // использовать не будем, поэтому возвращаем null
+        return null;
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[] {SpringConfig.class}; // подствляем наш конфигурационный класс SpringConfig, также как и в webxml
-        //мы подставляли путь до applicationContextMVC.xml
+        return new Class[] {SpringConfig.class};
     }
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] {"/"}; // эквивалентно из web.xml где указывали, что для всех вызовов перенаправляемся на наш диспатчер
+        return new String[] {"/"};
     }
 }
